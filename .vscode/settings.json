@@ -1,0 +1,46 @@
+{
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#116919"
+  },
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ESLint
+  "eslint.validate": ["html", "javascript"],
+  "eslint.alwaysShowStatus": true,
+  // save시 eslint를 사용해 autofix 실행
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  // Prettier
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+     "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "postcss": "css"
+  },
+  "files.eol": "\n",
+  "css.lint.unknownAtRules": "ignore",
+}
