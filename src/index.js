@@ -1,10 +1,12 @@
-import { StrictMode } from 'react';
-import { render } from 'react-dom';
-import App from './App';
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
 
-render(
+import { StrictMode } from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
   <StrictMode>
-    <App />
+    <div>amomo-react</div>
   </StrictMode>,
   document.getElementById('root')
 );
