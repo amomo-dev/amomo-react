@@ -1,0 +1,7 @@
+$breakpoint: 1440px;
+
+@mixin laptop {
+  @media screen and (max-width: #{$breakpoint}) {
+    @content;
+  }
+}
