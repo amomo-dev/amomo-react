@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="34" viewBox="0 0 21 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #00b1ff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path id="합치기_7" data-name="합치기 7" class="cls-1" d="M0,16,19,0ZM19,32,0,16Z" transform="translate(20 33) rotate(180)"/>
+</svg>
