@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="27.634" height="25.411" viewBox="0 0 27.634 25.411">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2px;
+      }
+
+      .cls-1 {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="그룹_79" data-name="그룹 79" transform="translate(-588.517 -2009.5)">
+    <path id="합치기_34" data-name="합치기 34" class="cls-1" d="M6000,15.538V7.872L6011.6,0V23.411Z" transform="translate(-5407.603 2010.5)"/>
+    <line id="선_92" data-name="선 92" class="cls-2" y1="6" x2="7" transform="translate(608.5 2012)"/>
+    <line id="선_93" data-name="선 93" class="cls-2" x2="7" y2="6" transform="translate(608.5 2027)"/>
+    <line id="선_94" data-name="선 94" class="cls-2" x2="7" transform="translate(608.5 2022.5)"/>
+    <path id="패스_30" data-name="패스 30" class="cls-2" d="M-5407.6,2018.258h-2.881v7.375h2.881" transform="translate(6000 0.242)"/>
+  </g>
+</svg>
