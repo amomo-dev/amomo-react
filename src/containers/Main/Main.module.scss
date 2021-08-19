@@ -26,9 +26,9 @@
   padding: 0 50px;
   width: 715px;
   height: 82px;
-  border: 2px solid $gray3;
+  border: 2px solid $gray4;
   border-radius: 50px;
-  color: $gray3;
+  color: $gray4;
 
   &_input {
     flex: 1;
@@ -85,14 +85,14 @@
   align-items: end;
   margin: 20px auto;
   width: 1200px;
-  color: $gray4;
+  color: $gray5;
 }
 
 hr {
   width: 1200px;
   height: 1px;
   border: none;
-  background: $gray3;
+  background: $gray4;
 }
 
 .pagination {
