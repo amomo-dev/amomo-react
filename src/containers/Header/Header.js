@@ -8,7 +8,7 @@ export function Header() {
   const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <header className={styles.menus}>
+    <header className={styles.header}>
       <h1 className={styles.logo}>
         <a href="/">
           <img src={logoImagePath} alt="아모모" />
