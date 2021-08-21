@@ -70,15 +70,4 @@
   margin-top: 100px;
   width: 215px;
   height: 40px;
-  background: $white;
-  border: 2px solid $hotpink;
-  border-radius: 20px;
-  color: $darkpink;
-  transition: all 0.4s;
-}
-
-.submit_btn:hover {
-  background: $btnPrimary-gradient;
-  color: $white;
-  transition: all 0.4s;
 }

@@ -5,7 +5,7 @@ import ballonImagePath from 'assets/images/bannerText.svg';
 import searchIconPath from 'assets/images/search.png';
 
 import { ReactComponent as SvgIconArrow } from 'assets/images/arrow.svg';
-import { TeamCard } from 'components';
+import { TeamCard, Button } from 'components';
 
 const teamData = [
   { title: '팀 타이틀', currentCount: 2, maxCount: 10 },
@@ -18,7 +18,7 @@ export function Main() {
   return (
     <div className={styles.content_wrap}>
       <div className={styles.banner}>
-        <img src={bannerImagePath} alt="" />
+        <img src={bannerImagePath} alt="" style={{ width: '100%' }} />
         <img
           src={ballonImagePath}
           alt="당신의 전장에 친구가 필요한 순간 아모모가 당신에게 꼭 맞는 친구를 찾아드립니다!"
@@ -51,7 +51,7 @@ export function Main() {
       </ul>
       <div className={styles.search_top}>
         <p>검색결과: 00건</p>
-        <button className={styles.btn_primary}>팀 등록</button>
+        <Button className={styles.make_team_btn}>팀 등록</Button>
       </div>
       <hr />
       <div className={styles.cards}>

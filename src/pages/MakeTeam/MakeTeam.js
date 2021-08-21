@@ -1,7 +1,7 @@
 import styles from './MakeTeam.module.scss';
 
 import { useState } from 'react';
-import { A11yHidden } from 'components';
+import { A11yHidden, Button } from 'components';
 
 const games = [
   { id: 0, name: '오버워치' },
@@ -105,13 +105,13 @@ export function MakeTeam() {
               <option value={false}>비공개</option>
             </select>
           </div>
-          <button
+          <Button
             type="submit"
             className={styles.submit_btn}
             disabled={isSubmitDisabled}
           >
             등록하기
-          </button>
+          </Button>
         </fieldset>
       </form>
     </div>
