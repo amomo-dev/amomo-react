@@ -1,0 +1,43 @@
+@import 'styles/utils';
+
+.card {
+  margin: 30px 30px;
+  width: 280px;
+  height: 280px;
+  background: $white;
+  border-radius: 20px;
+  box-shadow: 4px 4px 20px $gray3;
+  text-align: left;
+  overflow: hidden;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-5%);
+  }
+}
+
+.card_text {
+  position: relative;
+  padding: 10px 10px;
+  height: 124px;
+  color: $black;
+
+  .card:hover & {
+    color: $darkpink;
+  }
+}
+
+.team_title {
+  font-size: 18px;
+}
+
+.team_count {
+  margin-top: 10px;
+}
+
+.card_writer {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+  text-align: right;
+}

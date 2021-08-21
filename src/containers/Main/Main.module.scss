@@ -1,0 +1,117 @@
+@import 'styles/utils';
+
+.banner {
+  position: relative;
+}
+
+.banner_balloon {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  animation: bounce 0.6s ease infinite alternate;
+}
+
+@keyframes bounce {
+  100% {
+    top: 45%;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px auto 0;
+  padding: 0 50px;
+  width: 715px;
+  height: 82px;
+  border: 2px solid $gray4;
+  border-radius: 50px;
+  color: $gray4;
+
+  &_input {
+    flex: 1;
+    margin-right: 20px;
+    height: 80%;
+    border: none;
+    font-size: 20px;
+  }
+
+  &_input:focus {
+    outline: none;
+  }
+}
+
+.tag_group {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 715px;
+  color: $blue;
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 20px auto;
+  padding: 60px;
+  width: 1200px;
+  min-width: 360px;
+  background: $gray1;
+  border: none;
+}
+
+.btn_primary {
+  width: 140px;
+  height: 40px;
+  background: $white;
+  border: 2px solid $hotpink;
+  border-radius: 20px;
+  color: $darkpink;
+  transition: 0.4s;
+
+  &:hover {
+    background: $btnPrimary-gradient;
+    color: $white;
+  }
+}
+
+.search_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 20px auto;
+  width: 1200px;
+  color: $gray5;
+}
+
+hr {
+  width: 1200px;
+  height: 1px;
+  border: none;
+  background: $gray4;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  height: 50px;
+
+  & button {
+    margin: 0 12px;
+    width: 40px;
+  }
+
+  & svg:hover {
+    filter: hue-rotate(90deg);
+  }
+
+  & .prev {
+    transform: rotate(-180deg);
+  }
+}
