@@ -28,7 +28,7 @@ export function MakeTeam() {
           />
           <Input
             id="teamTitle"
-            label="팀명"
+            label="제목"
             labelClassName={styles.input_label}
             placeholder="4 ~ 30 자로 입력해주세요"
             className={`${styles.input_wrap} ${styles.full}`}
