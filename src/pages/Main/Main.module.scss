@@ -65,6 +65,8 @@
 }
 
 .make_team_btn {
+  @include primary-button;
+  @include link-button;
   width: 140px;
   height: 40px;
 }

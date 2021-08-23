@@ -4,8 +4,9 @@ import bannerImagePath from 'assets/images/mainBanner.png';
 import ballonImagePath from 'assets/images/bannerText.svg';
 import searchIconPath from 'assets/images/search.png';
 
+import { Link } from 'react-router-dom';
 import { ReactComponent as SvgIconArrow } from 'assets/images/arrow.svg';
-import { TeamCard, Button } from 'components';
+import { TeamCard } from 'components';
 
 const teamData = [
   { title: '팀 타이틀', currentCount: 2, maxCount: 10 },
@@ -51,12 +52,14 @@ export function Main() {
       </ul>
       <div className={styles.search_top}>
         <p>검색결과: 00건</p>
-        <Button className={styles.make_team_btn}>팀 등록</Button>
+        <Link to="/make-team" className={styles.make_team_btn}>
+          팀 등록
+        </Link>
       </div>
       <hr />
       <div className={styles.cards}>
         {teamData.map((team) => (
-          <TeamCard teamInfo={team} />
+          <TeamCard teamInfo={team} key={team.currentCount} />
         ))}
       </div>
       <div className={styles.pagination}>
