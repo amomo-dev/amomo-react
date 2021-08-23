@@ -6,6 +6,14 @@ import searchIconPath from 'assets/images/search.png';
 
 import { ReactComponent as SvgIconArrow } from 'assets/images/arrow.svg';
 import { TeamCard } from 'components';
+import requestTeam from 'service/team-api';
+
+(async () => {
+  const data1 = await requestTeam.get();
+  console.log(data1);
+  const data2 = await requestTeam.getById('6123f8cced40093dd4ddb8e3');
+  console.log(data2);
+})();
 
 const teamData = [
   { title: '팀 타이틀', currentCount: 2, maxCount: 10 },
