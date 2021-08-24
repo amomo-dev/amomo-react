@@ -111,6 +111,14 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  cursor: not-allowed;
+}
+
+select {
+  cursor: pointer;
+}
+
 button,
 input,
 select,

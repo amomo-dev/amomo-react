@@ -1,0 +1,19 @@
+@import 'styles/utils';
+
+.button {
+  width: 230px;
+  height: 40px;
+}
+
+.primary {
+  background: $white;
+  border: 2px solid $hotpink;
+  border-radius: 20px;
+  color: $darkpink;
+  transition: all 0.4s;
+
+  &:hover {
+    background: $btnPrimary-gradient;
+    color: $white;
+  }
+}
