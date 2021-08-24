@@ -15,7 +15,7 @@ export function Main() {
   useEffect(() => {
     const fetchTeams = async () => {
       const teamData = await requestTeam.get();
-      setTeams(teamData);
+      setTeams(teamData.filter((team) => team.isPublic === 'Y'));
     };
     fetchTeams();
   }, []);
