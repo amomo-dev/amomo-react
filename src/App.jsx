@@ -1,5 +1,6 @@
 import { AlertBar } from 'components';
-import { Header, Main, Footer, SideNav } from 'containers';
+import { Header, Footer, SideNav } from 'containers';
+import { Main, MakeTeam } from 'pages';
 
 export default function App() {
   return (

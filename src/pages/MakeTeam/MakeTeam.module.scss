@@ -1,0 +1,70 @@
+@import 'styles/utils';
+
+.team_regist {
+  margin: 50px auto;
+  padding: 100px 45px;
+  width: 1200px;
+  box-shadow: $content-modal-shadow;
+  font-size: 20px;
+  text-align: center;
+
+  & h2 {
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+.team_regist_form {
+  margin: 0 auto;
+  width: 68%;
+}
+
+.input_wrap {
+  display: inline-flex;
+  align-items: center;
+  margin: 30px 0;
+  padding-right: 20px;
+  width: 50%;
+
+  &:nth-of-type(2n) {
+    justify-content: flex-end;
+  }
+}
+
+.input_wrap.full {
+  padding-right: 20px;
+  width: 100%;
+}
+
+.input_label {
+  width: 140px;
+  text-align: center;
+  color: $hotpink;
+}
+
+.input_text {
+  flex: 1;
+  padding: 0 14px;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid $gray4;
+  font-size: 18px;
+  color: $gray5;
+}
+
+.select_box {
+  width: 200px;
+  height: 37px;
+  background: $white;
+  border: none;
+  border-bottom: 1px solid $gray5;
+  color: $gray5;
+  font-size: 20px;
+}
+
+.submit_btn {
+  margin-top: 100px;
+  width: 215px;
+  height: 40px;
+}

@@ -64,19 +64,9 @@
   border: none;
 }
 
-.btn_primary {
+.make_team_btn {
   width: 140px;
   height: 40px;
-  background: $white;
-  border: 2px solid $hotpink;
-  border-radius: 20px;
-  color: $darkpink;
-  transition: 0.4s;
-
-  &:hover {
-    background: $btnPrimary-gradient;
-    color: $white;
-  }
 }
 
 .search_top {
