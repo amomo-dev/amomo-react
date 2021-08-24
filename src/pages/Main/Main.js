@@ -20,10 +20,6 @@ export function Main() {
     fetchTeams();
   }, []);
 
-  useEffect(() => {
-    console.log(teams);
-  }, [teams]);
-
   return (
     <div className={styles.content_wrap}>
       <div className={styles.banner}>
@@ -62,12 +58,20 @@ export function Main() {
         <p>검색결과: 00건</p>
         <Button className={styles.make_team_btn}>팀 등록</Button>
       </div>
-      <hr />
-      <div className={styles.cards}>
-        {teams.map((team) => (
-          <TeamCard teamInfo={team} />
-        ))}
-      </div>
+      {teams.length === 0 && (
+        <div className={`${styles.cards} ${styles.nothing}`}>
+          팀이 없습니다😅
+          <br />
+          새로운 팀을 만들고 친구를 만나보세요🧚‍♀️
+        </div>
+      )}
+      {teams.length !== 0 && (
+        <div className={styles.cards}>
+          {teams.map((team) => (
+            <TeamCard teamInfo={team} />
+          ))}
+        </div>
+      )}
       <div className={styles.pagination}>
         <button type="button" aria-label="이전">
           <SvgIconArrow className={styles.prev} />
