@@ -14,13 +14,15 @@ export function TeamCard({ teamInfo }) {
   return (
     <a href="/" className={styles.card}>
       <img src={teamThumbnailPath} alt={gameName} />
-      <div className={styles.card_text}>
+      <div className={styles.card_info}>
         <span className={styles.team_name}>{name}</span>
         <h2 className={styles.team_title}>{title}</h2>
-        <span>랭크: {rank}</span>
-        <span className={styles.team_count}>
-          {currentCount} / {maxCount} (명)
-        </span>
+        <div className={styles.team_condition}>
+          <span className={styles.team_rank}>랭크: {rank}</span>
+          <span className={styles.team_count}>
+            {currentCount} / {maxCount} (명)
+          </span>
+        </div>
       </div>
     </a>
   );
