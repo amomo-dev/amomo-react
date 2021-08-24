@@ -4,25 +4,26 @@ import bannerImagePath from 'assets/images/mainBanner.png';
 import ballonImagePath from 'assets/images/bannerText.svg';
 import searchIconPath from 'assets/images/search.png';
 
+import { useState, useEffect } from 'react';
 import { ReactComponent as SvgIconArrow } from 'assets/images/arrow.svg';
 import { TeamCard, Button } from 'components';
-import requestTeam from 'service/team-api';
+import requestTeam from 'server/team-api';
 
-(async () => {
-  const data1 = await requestTeam.get();
-  console.log(data1);
-  const data2 = await requestTeam.getById('6123f8cced40093dd4ddb8e3');
-  console.log(data2);
-})();
-
-const teamData = [
-  { title: '팀 타이틀', currentCount: 2, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 3, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 4, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 5, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 6, maxCount: 10 },
-];
 export function Main() {
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    const fetchTeams = async () => {
+      const teamData = await requestTeam.get();
+      setTeams(teamData);
+    };
+    fetchTeams();
+  }, []);
+
+  useEffect(() => {
+    console.log(teams);
+  }, [teams]);
+
   return (
     <div className={styles.content_wrap}>
       <div className={styles.banner}>
@@ -63,7 +64,7 @@ export function Main() {
       </div>
       <hr />
       <div className={styles.cards}>
-        {teamData.map((team) => (
+        {teams.map((team) => (
           <TeamCard teamInfo={team} />
         ))}
       </div>
