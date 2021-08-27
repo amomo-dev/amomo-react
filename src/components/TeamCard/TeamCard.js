@@ -1,7 +1,5 @@
 import styles from './TeamCard.module.scss';
 
-import teamThumbnailPath from 'assets/images/thumb_동물의숲.png';
-
 export function TeamCard({ teamInfo }) {
   const {
     name,
@@ -11,9 +9,10 @@ export function TeamCard({ teamInfo }) {
     count: maxCount,
     game: gameName,
   } = teamInfo;
+
   return (
     <a href="/" className={styles.card}>
-      <img src={teamThumbnailPath} alt={gameName} />
+      <img src={require(`./thumb_${gameName}.png`).default} alt={gameName} />
       <div className={styles.card_info}>
         <span className={styles.team_name}>{name}</span>
         <h2 className={styles.team_title}>{title}</h2>
