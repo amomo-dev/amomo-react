@@ -6,14 +6,5 @@
 }
 
 .primary {
-  background: $white;
-  border: 2px solid $hotpink;
-  border-radius: 20px;
-  color: $darkpink;
-  transition: all 0.4s;
-
-  &:hover {
-    background: $btnPrimary-gradient;
-    color: $white;
-  }
+  @include primary-button;
 }

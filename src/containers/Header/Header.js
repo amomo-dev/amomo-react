@@ -3,6 +3,7 @@ import styles from './Header.module.scss';
 import logoImagePath from 'assets/images/logo.png';
 
 import { useState } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 
 export function Header() {
   const [isLogin, setIsLogin] = useState(false);
@@ -16,25 +17,25 @@ export function Header() {
       </h1>
       <ul className={styles.util}>
         <li>
-          {!isLogin && <a href="/">로그인</a>}
-          {isLogin && <a href="/">로그아웃</a>}
+          {!isLogin && <Link to="/login">로그인</Link>}
+          {isLogin && <Link to="/">로그아웃</Link>}
         </li>
         <li>
-          <a href="/">이용안내</a>
+          <Link to="/">이용안내</Link>
         </li>
       </ul>
       <ul className={styles.gnb}>
         <li>
-          <a href="/">game</a>
+          <NavLink to="/">game</NavLink>
         </li>
         <li>
-          <a href="/">project</a>
+          <NavLink to="/">project</NavLink>
         </li>
         <li>
-          <a href="/">community</a>
+          <NavLink to="/">community</NavLink>
         </li>
         <li>
-          <a href="/">notice</a>
+          <NavLink to="/">notice</NavLink>
         </li>
       </ul>
     </header>

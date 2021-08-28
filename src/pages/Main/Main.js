@@ -5,8 +5,9 @@ import ballonImagePath from 'assets/images/bannerText.svg';
 import searchIconPath from 'assets/images/search.png';
 
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as SvgIconArrow } from 'assets/images/arrow.svg';
-import { TeamCard, Button } from 'components';
+import { TeamCard } from 'components';
 import requestTeam from 'server/team-api';
 
 export function Main() {
@@ -56,7 +57,9 @@ export function Main() {
       </ul>
       <div className={styles.search_top}>
         <p>검색결과: 00건</p>
-        <Button className={styles.make_team_btn}>팀 등록</Button>
+        <Link to="/make-team" className={styles.make_team_btn}>
+          팀 등록
+        </Link>
       </div>
       {teams.length === 0 && (
         <div className={`${styles.cards} ${styles.nothing}`}>
