@@ -14,6 +14,17 @@ const requestTeam = (() => {
       const response = await instance.get(`team/${teamId}`);
       return response.data;
     },
+    async createTeam(info) {
+      const response = await instance.post('team', {
+        name: info.name,
+        title: info.title,
+        game: info.game,
+        count: info.count,
+        rank: info.rank,
+        isPublic: info.isPublic,
+      });
+      return response;
+    },
   };
 })();
 
