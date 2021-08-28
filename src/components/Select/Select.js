@@ -42,11 +42,14 @@ export class Select extends Component {
           onChange={this.handleChange}
           {...restProps}
         >
-          {optionData.map(({ id, name }) => (
-            <option value={id} key={id}>
-              {name}
-            </option>
-          ))}
+          {optionData.map((option) => {
+            const { id, name } = option;
+            return (
+              <option value={option.value ?? id} key={id}>
+                {name}
+              </option>
+            );
+          })}
         </select>
       </div>
     );

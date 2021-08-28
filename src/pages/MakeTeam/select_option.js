@@ -1,18 +1,18 @@
 export const games = [
-  { id: 0, name: '오버워치' },
-  { id: 1, name: 'LOL' },
-  { id: 2, name: '동물의 숲' },
-  { id: 3, name: '마인크래프트' },
-  { id: 4, name: '기타' },
+  { id: 0, value: 'overwatch', name: '오버워치' },
+  { id: 1, value: 'lol', name: 'LOL' },
+  { id: 2, value: 'animalCrossing', name: '동물의 숲' },
+  { id: 3, value: 'minecraft', name: '마인크래프트' },
+  { id: 4, value: 'default', name: '기타' },
 ];
 
 export const ranks = [
-  { id: 0, name: '랭크 없음' },
-  { id: 1, name: '브론즈' },
-  { id: 2, name: '실버' },
-  { id: 3, name: '골드' },
-  { id: 4, name: '플래티넘' },
-  { id: 5, name: '다이아(이상)' },
+  { id: 0, value: '랭크 없음', name: '랭크 없음' },
+  { id: 1, value: '브론즈', name: '브론즈' },
+  { id: 2, value: '실버', name: '실버' },
+  { id: 3, value: '골드', name: '골드' },
+  { id: 4, value: '플래티넘', name: '플래티넘' },
+  { id: 5, value: '다이아(이상)', name: '다이아(이상)' },
 ];
 
 export const memCount = [
@@ -27,6 +27,6 @@ export const memCount = [
 ];
 
 export const publicSetting = [
-  { id: 0, name: '공개' },
-  { id: 1, name: '비공개' },
+  { id: 0, value: 'Y', name: '공개' },
+  { id: 1, value: 'N', name: '비공개' },
 ];
