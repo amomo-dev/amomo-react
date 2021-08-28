@@ -4,14 +4,38 @@ import { useState } from 'react';
 import { A11yHidden, Button, Input, Select } from 'components';
 
 import { games, ranks, memCount, publicSetting } from './select_option';
+import requestTeam from 'server/team-api';
 
 export function MakeTeam() {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const $form = e.target;
+
+    try {
+      const createResponse = await requestTeam.create({
+        name: $form.teamName.value,
+        game: $form.game.value,
+        count: $form.teamMemCnt.value,
+        rank: $form.rank.value,
+        isPublic: $form.public.value,
+        title: $form.teamTitle.value,
+      });
+
+      if (createResponse.status === 200) {
+        alert('우와~ 팀 생성에 성공하였습니다!🎉');
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className={styles.team_regist}>
       <h2 className={styles.page_title}>팀 등록하기</h2>
-      <form className={styles.team_regist_form}>
+      <form className={styles.team_regist_form} onSubmit={handleSubmit}>
         <fieldset>
           <A11yHidden as="legend">팀 등록 폼</A11yHidden>
           <Input
