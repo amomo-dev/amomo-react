@@ -4,18 +4,23 @@ import bannerImagePath from 'assets/images/mainBanner.png';
 import ballonImagePath from 'assets/images/bannerText.svg';
 import searchIconPath from 'assets/images/search.png';
 
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ReactComponent as SvgIconArrow } from 'assets/images/arrow.svg';
 import { TeamCard } from 'components';
+import requestTeam from 'server/team-api';
 
-const teamData = [
-  { title: '팀 타이틀', currentCount: 2, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 3, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 4, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 5, maxCount: 10 },
-  { title: '팀 타이틀', currentCount: 6, maxCount: 10 },
-];
 export function Main() {
+  const [teams, setTeams] = useState([]);
+
+  useEffect(() => {
+    const fetchTeams = async () => {
+      const teamData = await requestTeam.get();
+      setTeams(teamData.filter((team) => team.isPublic === 'Y'));
+    };
+    fetchTeams();
+  }, []);
+
   return (
     <div className={styles.content_wrap}>
       <div className={styles.banner}>
@@ -56,12 +61,20 @@ export function Main() {
           팀 등록
         </Link>
       </div>
-      <hr />
-      <div className={styles.cards}>
-        {teamData.map((team) => (
-          <TeamCard teamInfo={team} key={team.currentCount} />
-        ))}
-      </div>
+      {teams.length === 0 && (
+        <div className={`${styles.cards} ${styles.nothing}`}>
+          팀이 없습니다😅
+          <br />
+          새로운 팀을 만들고 친구를 만나보세요🧚‍♀️
+        </div>
+      )}
+      {teams.length !== 0 && (
+        <div className={styles.cards}>
+          {teams.map((team) => (
+            <TeamCard teamInfo={team} />
+          ))}
+        </div>
+      )}
       <div className={styles.pagination}>
         <button type="button" aria-label="이전">
           <SvgIconArrow className={styles.prev} />

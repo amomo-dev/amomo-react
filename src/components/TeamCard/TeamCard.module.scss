@@ -16,10 +16,11 @@
   }
 }
 
-.card_text {
-  position: relative;
-  padding: 10px 10px;
-  height: 124px;
+.card_info {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px;
+  height: 136px;
   color: $black;
 
   .card:hover & {
@@ -27,17 +28,17 @@
   }
 }
 
+.team_name {
+  color: $gray4;
+}
+
 .team_title {
+  flex: 1;
   font-size: 18px;
+  font-weight: bold;
 }
 
-.team_count {
-  margin-top: 10px;
-}
-
-.card_writer {
-  position: absolute;
-  bottom: 0;
-  right: 15px;
-  text-align: right;
+.team_condition {
+  display: flex;
+  justify-content: space-between;
 }

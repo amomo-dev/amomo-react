@@ -52,16 +52,15 @@
   font-size: 16px;
 }
 
-.cards {
+.search_top {
   display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  margin: 20px auto;
-  padding: 60px;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 auto;
+  padding-bottom: 20px;
   width: 1200px;
-  min-width: 360px;
-  background: $gray1;
-  border: none;
+  border-bottom: 1px solid $gray4;
+  color: $gray5;
 }
 
 .make_team_btn {
@@ -71,20 +70,24 @@
   height: 40px;
 }
 
-.search_top {
+.cards {
   display: flex;
-  justify-content: space-between;
-  align-items: end;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 20px auto;
+  padding: 60px;
   width: 1200px;
-  color: $gray5;
-}
+  min-width: 360px;
+  background: $gray1;
 
-hr {
-  width: 1200px;
-  height: 1px;
-  border: none;
-  background: $gray4;
+  &.nothing {
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    line-height: 2;
+    text-align: center;
+    font-size: 18px;
+  }
 }
 
 .pagination {
